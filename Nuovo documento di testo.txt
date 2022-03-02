@@ -1,0 +1,48 @@
+creato repository e progetto
+poi login in gitpod usando credenziali github
+aprire terminale interno
+
+npm install -g yo
+npm install -g generator-jhipster
+jhipster //crea applicazione
+
+yo-rc.json contiene tutte le scelte che abbiamo fatto inizialmente in fase di creazione (db scelto, ecc)
+
+abbiamo cartelle come repository, config.
+lo usiamo anche come progetto da seguire per le best practices
+
+
+lanciamo applicazione
+./mvnw
+
+admin admin oppure user user
+
+https://csoprana-jhipstertest-hykdkfegyru.ws-eu34.gitpod.io/?folder=vscode-remote%3A%2F%2Fcsoprana-jhipstertest-hykdkfegyru.ws-eu34.gitpod.io%2Fworkspace
+
+
+
+//al posto di mongo useremo postgresl
+docker-compose -f src/main/docker/postgresql.yml 
+
+//crea una entity
+jhipster entity 
+
+
+
+
+tutti  i microservizi si registrano al gateway cosi può fare un bilanciamento
+https://microservices.io/
+
+
+https://github.com/andrea-cavalieri/ibanking-app/blob/main/ibanking.jdl
+
+keycloak gestisce l'autorizzazione
+
+===== generate application
+
+jhipster jdl ibanking.jdl
+docker-compose -f src/main/docker/keycloak.yml up -d 
+// docker-compose -f gateway/src/main/docker/keycloak.yml up -d 
+lanciamo discovery server (da dentro bonifici scrivo ./mvnw
+lanciamo conti e gateway (da dentro conti e gateway scrivo)
+login
